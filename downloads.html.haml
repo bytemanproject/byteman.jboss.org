@@ -1,17 +1,452 @@
 ---
 layout: rightcol
-rightcol_partial: rightcol-downloads.html.haml
+rightcol_partial: rightcol-byteman.html.haml
 title: Downloads
 ---
 
 
 / Main hero unit for a primary marketing message or call to action
 .row
-  .col-md-9
-    %h1 Project Name Downloads
-    %p Latest Releaase 5.6.0
-    %p<
-      %a.btn.btn-primary.btn-lg(href="#{site.base_url}/swatch.html") View the Swatches &raquo;
-    %hr
+  .col-md-16
+    %h1 Byteman Project Downloads
+    %h3 Latest Release
+    %p The latest release version is 3.0.2. You should probably use this version if you are new to Byteman.
+    %br
 
-/ Example Content
+  .table-responsive
+    %table.table.table-bordered.table-striped
+      %thead
+
+        %tr
+          %th Binary + Docs
+          %th Full Source
+          %th Release Notes
+          %th Programmer's Guide
+      %tbody
+
+        %tr
+          %td
+            %a(href="http://downloads.jboss.org/byteman/3.0.2/byteman-download-3.0.2-bin.zip") 3.0.2
+          %td
+            %a(href="http://downloads.jboss.org/byteman/3.0.2/byteman-download-3.0.2-full.zip") 3.0.2
+          %td
+            %a(href="http://downloads.jboss.org/byteman/3.0.2/ReleaseNotes.txt") 3.0.2
+          %td
+            %a(href="http://downloads.jboss.org/byteman/3.0.2/ProgrammersGuide.html") 3.0.2 html
+            |
+            %a(href="http://downloads.jboss.org/byteman/3.0.2/ProgrammersGuide.pdf") pdf
+
+    %br
+    %p
+
+      Note that download zip files and release jars are also available
+      from the Maven Central repo. If you are using maven and BMUnit
+      to run Byteman based tests then you may not need to download a
+      zip release. See the 
+
+      %a(href="docs.html") tutorials
+
+      for more details
+
+
+  %h3 Older Releases
+  %p  Use the older releases for backwards compatibility.
+  %br
+  .table-responsive
+    %table.table.table-bordered.table-striped
+      %thead
+
+        %tr
+          %th Binary + Docs
+          %th Full Source
+          %th Release Notes
+          %th Programmer's Guide
+
+      %tbody
+
+        %tr
+          %td
+            %a(href="http://downloads.jboss.org/byteman/3.0.1/byteman-download-3.0.1-bin.zip") 3.0.1
+          %td
+            %a(href="http://downloads.jboss.org/byteman/3.0.1/byteman-download-3.0.1-full.zip") 3.0.1
+          %td
+            %a(href="http://downloads.jboss.org/byteman/3.0.1/ReleaseNotes.txt") 3.0.1
+          %td
+            use
+            %a(href="http://downloads.jboss.org/byteman/3.0.0/ProgrammersGuide.html") 3.0.0 html
+            |
+            %a(href="http://downloads.jboss.org/byteman/3.0.0/ProgrammersGuide.pdf") pdf
+
+        %tr
+          %td
+            %a(href="http://downloads.jboss.org/byteman/2.2.2/byteman-download-2.2.2-bin.zip") 2.2.2
+          %td
+            %a(href="http://downloads.jboss.org/byteman/2.2.2/byteman-download-2.2.2-full.zip") 2.2.2
+          %td
+            %a(href="http://downloads.jboss.org/byteman/2.2.2/ReleaseNotes.txt") 2.2.2
+          %td
+            %a(href="http://downloads.jboss.org/byteman/2.2.2/ProgrammersGuide.html") 2.2.2 html
+            |
+            %a(href="http://downloads.jboss.org/byteman/2.2.2/ProgrammersGuide.pdf") pdf
+
+        %tr
+          %td
+            %a(href="http://downloads.jboss.org/byteman/2.2.1/byteman-download-2.2.1-bin.zip") 2.2.1
+          %td
+            %a(href="http://downloads.jboss.org/byteman/2.2.1/byteman-download-2.2.1-full.zip") 2.2.1
+          %td
+            %a(href="http://downloads.jboss.org/byteman/2.2.1/ReleaseNotes.txt") 2.2.1
+          %td
+            %a(href="http://downloads.jboss.org/byteman/2.2.1/ProgrammersGuide.html") 2.2.1 html
+            |
+            %a(href="http://downloads.jboss.org/byteman/2.2.1/ProgrammersGuide.pdf") pdf
+
+        %tr
+          %td
+            %a(href="http://downloads.jboss.org/byteman/2.2.0.1/byteman-download-2.2.0.1-bin.zip") 2.2.0.1
+          %td
+            %a(href="http://downloads.jboss.org/byteman/2.2.0.1/byteman-download-2.2.0.1-full.zip") 2.2.0.1
+          %td
+            %a(href="http://downloads.jboss.org/byteman/2.2.0.1/ReleaseNotes.txt") 2.2.0.1
+          %td
+            use
+            %a(href="http://downloads.jboss.org/byteman/2.2.0/ProgrammersGuide.html") 2.2.0 html
+            |
+            %a(href="http://downloads.jboss.org/byteman/2.2.0/ProgrammersGuide.pdf") pdf
+
+        %tr
+          %td
+            %a(href="http://downloads.jboss.org/byteman/2.2.0/byteman-download-2.2.0-bin.zip") 2.2.0
+          %td
+            %a(href="http://downloads.jboss.org/byteman/2.2.0/byteman-download-2.2.0-full.zip") 2.2.0
+          %td
+            %a(href="http://downloads.jboss.org/byteman/2.2.0/ReleaseNotes.txt") 2.2.0
+          %td
+            %a(href="http://downloads.jboss.org/byteman/2.2.0/ProgrammersGuide.html") 2.2.0 html
+            |
+            %a(href="http://downloads.jboss.org/byteman/2.2.0/ProgrammersGuide.pdf") pdf
+
+        %tr
+          %td
+            %a(href="http://downloads.jboss.org/byteman/2.1.4.1/byteman-download-2.1.4.1-bin.zip") 2.1.4.1
+          %td
+            %a(href="http://downloads.jboss.org/byteman/2.1.4.1/byteman-download-2.1.4.1-full.zip") 2.1.4.1
+          %td
+            %a(href="http://downloads.jboss.org/byteman/2.1.4.1/ReleaseNotes.txt") 2.1.4.1
+          %td
+            use
+            %a(href="http://downloads.jboss.org/byteman/2.1.4/ProgrammersGuide.html") 2.1.4 html
+            |
+            %a(href="http://downloads.jboss.org/byteman/2.1.4/ProgrammersGuide.pdf") pdf
+
+        %tr
+          %td
+            %a(href="http://downloads.jboss.org/byteman/2.1.4/byteman-download-2.1.4-bin.zip") 2.1.4
+          %td
+            %a(href="http://downloads.jboss.org/byteman/2.1.4/byteman-download-2.1.4-full.zip") 2.1.4
+          %td
+            %a(href="http://downloads.jboss.org/byteman/2.1.4/ReleaseNotes.txt") 2.1.4
+          %td
+            %a(href="http://downloads.jboss.org/byteman/2.1.4/ProgrammersGuide.html") 2.1.4 html
+            |
+            %a(href="http://downloads.jboss.org/byteman/2.1.4/ProgrammersGuide.pdf") pdf
+
+        %tr
+          %td
+            %a(href="http://downloads.jboss.org/byteman/2.1.3/byteman-download-2.1.3-bin.zip") 2.1.3
+          %td
+            %a(href="http://downloads.jboss.org/byteman/2.1.3/byteman-download-2.1.3-full.zip") 2.1.3
+          %td
+            %a(href="http://downloads.jboss.org/byteman/2.1.3/ReleaseNotes.txt") 2.1.3
+          %td
+            %a(href="http://downloads.jboss.org/byteman/2.1.3/ProgrammersGuideSinglePage.html") 2.1.3 html
+            |
+            %a(href="http://downloads.jboss.org/byteman/2.1.3/ProgrammersGuide.pdf") pdf
+
+        %tr
+          %td
+            %a(href="http://downloads.jboss.org/byteman/2.1.2/byteman-download-2.1.2-bin.zip") 2.1.2
+          %td
+            %a(href="http://downloads.jboss.org/byteman/2.1.2/byteman-download-2.1.2-full.zip") 2.1.2
+          %td
+            %a(href="http://downloads.jboss.org/byteman/2.1.2/ReleaseNotes.txt") 2.1.2
+          %td
+            %a(href="http://downloads.jboss.org/byteman/2.1.2/ProgrammersGuideSinglePage.html") 2.1.2 html
+            |
+            %a(href="http://downloads.jboss.org/byteman/2.1.2/ProgrammersGuide.pdf") pdf
+
+
+        %tr
+          %td
+            %a(href="http://downloads.jboss.org/byteman/2.1.0/byteman-download-2.1.0-bin.zip") 2.1.0
+          %td
+            %a(href="http://downloads.jboss.org/byteman/2.1.0/byteman-download-2.1.0-full.zip") 2.1.0
+          %td
+            %a(href="http://downloads.jboss.org/byteman/2.1.0/ReleaseNotes.txt") 2.1.0
+          %td
+            %a(href="http://downloads.jboss.org/byteman/2.1.0/ProgrammersGuideSinglePage.html") 2.1.0 html
+            |
+            %a(href="http://downloads.jboss.org/byteman/2.1.0/ProgrammersGuide.pdf") pdf
+
+
+        %tr
+          %td
+            %a(href="http://downloads.jboss.org/byteman/2.0.4/byteman-download-2.0.4-bin.zip") 2.0.4
+          %td
+            %a(href="http://downloads.jboss.org/byteman/2.0.4/byteman-download-2.0.4-full.zip") 2.0.4
+          %td
+            %a(href="http://downloads.jboss.org/byteman/2.0.4/ReleaseNotes.txt") 2.0.4
+          %td
+            %a(href="http://downloads.jboss.org/byteman/2.0.4/ProgrammersGuideSinglePage.html") 2.0.4 html
+            |
+            %a(href="http://downloads.jboss.org/byteman/2.0.4/ProgrammersGuide.pdf") pdf
+
+
+        %tr
+          %td
+            %a(href="http://downloads.jboss.org/byteman/2.0.3/byteman-download-2.0.3-bin.zip") 2.0.3
+          %td
+            %a(href="http://downloads.jboss.org/byteman/2.0.3/byteman-download-2.0.3-full.zip") 2.0.3
+          %td
+            %a(href="http://downloads.jboss.org/byteman/2.0.3/ReleaseNotes.txt") 2.0.3
+          %td
+            %a(href="http://downloads.jboss.org/byteman/2.0.3/ProgrammersGuideSinglePage.html") 2.0.3 html
+            |
+            %a(href="http://downloads.jboss.org/byteman/2.0.3/ProgrammersGuide.pdf") pdf
+
+
+        %tr
+          %td
+            %a(href="http://downloads.jboss.org/byteman/2.0.1/byteman-download-2.0.1-bin.zip") 2.0.1
+          %td
+            %a(href="http://downloads.jboss.org/byteman/2.0.1/byteman-download-2.0.1-full.zip") 2.0.1
+          %td
+            %a(href="http://downloads.jboss.org/byteman/2.0.1/ReleaseNotes.txt") 2.0.1
+          %td
+            %a(href="http://downloads.jboss.org/byteman/2.0.1/ProgrammersGuideSinglePage.html") 2.0.1 html
+            |
+            %a(href="http://downloads.jboss.org/byteman/2.0.1/ProgrammersGuide.pdf") pdf
+
+
+        %tr
+          %td
+            %a(href="http://downloads.jboss.org/byteman/2.0.0/byteman-download-2.0.0-bin.zip") 2.0.0
+          %td
+            %a(href="http://downloads.jboss.org/byteman/2.0.0/byteman-download-2.0.0-full.zip") 2.0.0
+          %td
+            %a(href="http://downloads.jboss.org/byteman/2.0.0/ReleaseNotes.txt") 2.0.0
+          %td
+            %a(href="http://downloads.jboss.org/byteman/2.0.0/ProgrammersGuideSinglePage.html") 2.0.0 html
+            |
+            %a(href="http://downloads.jboss.org/byteman/2.0.0/ProgrammersGuide.pdf") pdf
+
+
+  %h3 Legacy Releases
+  %p  The legacy releases are included for for completeness. They are unlikely to be useful to anyone who doe snto have a legacy system to maintain.
+  %br
+  .table-responsive
+    %table.table.table-bordered.table-striped
+      %thead
+
+        %tr
+          %th Binary + Docs
+          %th Full Source
+          %th Release Notes
+          %th Programmers Guide
+
+      %tbody
+
+        %tr
+          %td
+            %a(href="http://downloads.jboss.org/byteman/1.6.0/byteman-download-1.6.0-bin.zip") 1.6.0
+          %td
+            %a(href="http://downloads.jboss.org/byteman/1.6.0/byteman-download-1.6.0-full.zip") 1.6.0
+          %td
+            %a(href="http://downloads.jboss.org/byteman/1.6.0/ReleaseNotes.txt") 1.6.0
+          %td
+            use
+            %a(href="http://downloads.jboss.org/byteman/1.5.2/ProgrammersGuideSinglePage.html") 1.5.2 html
+            |
+            %a(href="http://downloads.jboss.org/byteman/1.5.2/ProgrammersGuide.pdf") pdf
+
+
+        %tr
+          %td
+            %a(href="http://downloads.jboss.org/byteman/1.5.2/byteman-download-1.5.2-bin.zip") 1.5.2
+          %td
+            %a(href="http://downloads.jboss.org/byteman/1.5.2/byteman-download-1.5.2-full.zip") 1.5.2
+          %td
+            %a(href="http://downloads.jboss.org/byteman/1.5.2/ReleaseNotes.txt") 1.5.2
+          %td
+            %a(href="http://downloads.jboss.org/byteman/1.5.2/ProgrammersGuideSinglePage.html") 1.5.2 html
+            |
+            %a(href="http://downloads.jboss.org/byteman/1.5.2/ProgrammersGuide.pdf") pdf
+
+
+        %tr
+          %td
+            %a(href="http://downloads.jboss.org/byteman/1.5.1/byteman-download-1.5.1-bin.zip") 1.5.1
+          %td
+            %a(href="http://downloads.jboss.org/byteman/1.5.1/byteman-download-1.5.1-full.zip") 1.5.1
+          %td
+            %a(href="http://downloads.jboss.org/byteman/1.5.1/ReleaseNotes.txt") 1.5.1
+          %td
+            %a(href="http://downloads.jboss.org/byteman/1.5.1/ProgrammersGuideSinglePage.html") 1.5.1 html
+            |
+            %a(href="http://downloads.jboss.org/byteman/1.5.1/ProgrammersGuide.pdf") pdf
+
+        %tr
+          %td
+            %a(href="http://downloads.jboss.org/byteman/1.5.0/byteman-download-1.5.0-bin.zip") 1.5.0
+          %td
+            %a(href="http://downloads.jboss.org/byteman/1.5.0/byteman-download-1.5.0-full.zip") 1.5.0
+          %td
+            %a(href="http://downloads.jboss.org/byteman/1.5.0/ReleaseNotes.txt") 1.5.0
+          %td
+            %a(href="http://downloads.jboss.org/byteman/1.5.0/ProgrammersGuideSinglePage.html") 1.5.0 html
+            |
+            %a(href="http://downloads.jboss.org/byteman/1.5.0/ProgrammersGuide.pdf") pdf
+
+        %tr
+          %td
+            %a(href="http://downloads.jboss.org/byteman/1.4.1/byteman-download-1.4.1-bin.zip") 1.4.1
+          %td
+            %a(href="http://downloads.jboss.org/byteman/1.4.1/byteman-download-1.4.1-full.zip") 1.4.1
+          %td
+            %a(href="http://downloads.jboss.org/byteman/1.4.1/ReleaseNotes.txt") 1.4.1
+          %td
+            %a(href="http://downloads.jboss.org/byteman/1.4.1/ProgrammersGuide.pdf") 1.4.1 pdf
+
+        %tr
+          %td
+            %a(href="http://downloads.jboss.org/byteman/1.4.0/byteman-download-1.4.0-bin.zip") 1.4.0
+          %td
+            %a(href="http://downloads.jboss.org/byteman/1.4.0/byteman-download-1.4.0-full.zip") 1.4.0
+          %td
+            %a(href="http://downloads.jboss.org/byteman/1.4.0/ReleaseNotes.txt") 1.4.0
+          %td
+            %a(href="http://downloads.jboss.org/byteman/1.4.0/ProgrammersGuide.pdf") 1.4.0 pdf
+
+        %tr
+          %td
+            %a(href="http://downloads.jboss.org/byteman/1.3.0/byteman-download-1.3.0-bin.zip") 1.3.0
+          %td
+            %a(href="http://downloads.jboss.org/byteman/1.3.0/byteman-download-1.3.0-full.zip") 1.3.0
+          %td
+            %a(href="http://downloads.jboss.org/byteman/1.3.0/ReleaseNotes.txt") 1.3.0
+          %td
+            %a(href="http://downloads.jboss.org/byteman/1.3.0/ProgrammersGuide.pdf") 1.3.0 pdf
+
+        %tr
+          %td
+            %a(href="http://downloads.jboss.org/byteman/1.2.2.1/byteman-download-1.2.2.1-bin.zip") 1.2.2.1
+          %td
+            %a(href="http://downloads.jboss.org/byteman/1.2.2.1/byteman-download-1.2.2.1-full.zip") 1.2.2.1
+          %td
+            %a(href="http://downloads.jboss.org/byteman/1.2.2.1/ReleaseNotes.txt") 1.2.2.1
+          %td
+            use
+            %a(href="http://downloads.jboss.org/byteman/1.2.2/ProgrammersGuide.pdf") 1.2.2 pdf
+
+        %tr
+          %td
+            %a(href="http://downloads.jboss.org/byteman/1.2.2/byteman-download-1.2.2-bin.zip") 1.2.2
+          %td
+            %a(href="http://downloads.jboss.org/byteman/1.2.2/byteman-download-1.2.2-full.zip") 1.2.2
+          %td
+            %a(href="http://downloads.jboss.org/byteman/1.2.2/ReleaseNotes.txt") 1.2.2
+          %td
+            %a(href="http://downloads.jboss.org/byteman/1.2.2/ProgrammersGuide.pdf") 1.2.2 pdf
+
+        %tr
+          %td
+            %a(href="http://downloads.jboss.org/byteman/1.2.1/byteman-download-1.2.1-bin.zip") 1.2.1
+          %td
+            %a(href="http://downloads.jboss.org/byteman/1.2.1/byteman-download-1.2.1-full.zip") 1.2.1
+          %td
+            %a(href="http://downloads.jboss.org/byteman/1.2.1/ReleaseNotes.txt") 1.2.1
+          %td
+            %a(href="http://downloads.jboss.org/byteman/1.2.1/ProgrammersGuide.pdf") 1.2.1 pdf
+
+        %tr
+          %td
+            %a(href="http://downloads.jboss.org/byteman/1.2.0.1/byteman-download-1.2.0.1-bin.zip") 1.2.0.1
+          %td
+            %a(href="http://downloads.jboss.org/byteman/1.2.0.1/byteman-download-1.2.0.1-full.zip") 1.2.0.1
+          %td
+            %a(href="http://downloads.jboss.org/byteman/1.2.0.1/ReleaseNotes.txt") 1.2.0.1
+          %td
+            %a(href="http://downloads.jboss.org/byteman/1.2.0.1/ProgrammersGuide.pdf") 1.2.0.1 pdf
+
+        %tr
+          %td
+            %a(href="http://downloads.jboss.org/byteman/1.1.1/byteman-download-1.1.1-bin.zip") 1.1.1
+          %td
+            %a(href="http://downloads.jboss.org/byteman/1.1.1/byteman-download-1.1.1-full.zip") 1.1.1
+          %td
+            %a(href="http://downloads.jboss.org/byteman/1.1.1/ReleaseNotes.txt") 1.1.1
+          %td
+            %a(href="http://downloads.jboss.org/byteman/1.1.1/ProgrammersGuide.pdf") 1.1.1 pdf
+
+        %tr
+          %td
+            %a(href="http://downloads.jboss.org/byteman/1.1.0/byteman-download-1.1.0-bin.zip") 1.1.0
+          %td
+            %a(href="http://downloads.jboss.org/byteman/1.1.0/byteman-download-1.1.0-full.zip") 1.1.0
+          %td
+            %a(href="http://downloads.jboss.org/byteman/1.1.0/ReleaseNotes.txt") 1.1.0
+          %td
+            %a(href="http://downloads.jboss.org/byteman/1.1.0/ProgrammersGuide.pdf") 1.1.0 pdf
+
+        %tr
+          %td
+            %a(href="http://downloads.jboss.org/byteman/1.0.3.CP02/byteman-download-1.0.3.CP02-bin.zip") 1.0.3.CP02
+          %td
+            %a(href="http://downloads.jboss.org/byteman/1.0.3.CP02/byteman-download-1.0.3.CP02-full.zip") 1.0.3.CP02
+          %td
+            %a(href="http://downloads.jboss.org/byteman/1.0.3.CP02/ReleaseNotes.txt") 1.0.3.CP02
+          %td
+            use
+            %a(href="http://downloads.jboss.org/byteman/1.0.3/ProgrammersGuide.pdf") 1.0.3 pdf
+
+        %tr
+          %td
+            %a(href="http://downloads.jboss.org/byteman/1.0.3.CP01/byteman-download-1.0.3.CP01-bin.zip") 1.0.3.CP01
+          %td
+            %a(href="http://downloads.jboss.org/byteman/1.0.3.CP01/byteman-download-1.0.3.CP01-full.zip") 1.0.3.CP01
+          %td
+            %a(href="http://downloads.jboss.org/byteman/1.0.3.CP01/ReleaseNotes.txt") 1.0.3.CP01
+          %td
+            use
+            %a(href="http://downloads.jboss.org/byteman/1.0.3/ProgrammersGuide.pdf") 1.0.3 pdf
+
+        %tr
+          %td
+            %a(href="http://downloads.jboss.org/byteman/1.0.3/byteman-download-1.0.3-bin.zip") 1.0.3
+          %td
+            %a(href="http://downloads.jboss.org/byteman/1.0.3/byteman-download-1.0.3-full.zip") 1.0.3
+          %td
+            %a(href="http://downloads.jboss.org/byteman/1.0.3/ReleaseNotes.txt") 1.0.3
+          %td
+            %a(href="http://downloads.jboss.org/byteman/1.0.3/ProgrammersGuide.pdf") 1.0.3 pdf
+
+        %tr
+          %td
+            %a(href="http://downloads.jboss.org/byteman/1.0.2/byteman-download-1.0.2-bin.zip") 1.0.2
+          %td
+            %a(href="http://downloads.jboss.org/byteman/1.0.2/byteman-download-1.0.2-full.zip") 1.0.2
+          %td
+            %a(href="http://downloads.jboss.org/byteman/1.0.2/ReleaseNotes.txt") 1.0.2
+          %td
+            %a(href="http://downloads.jboss.org/byteman/1.0.2/ProgrammersGuide.pdf") 1.0.2 pdf
+
+        %tr
+          %td
+            %a(href="http://downloads.jboss.org/byteman/1.0.1/byteman-download-1.0.1-bin.zip") 1.0.1
+          %td
+            %a(href="http://downloads.jboss.org/byteman/1.0.1/byteman-download-1.0.1-full.zip") 1.0.1
+          %td
+            %a(href="http://downloads.jboss.org/byteman/1.0.1/ReleaseNotes.txt") 1.0.1
+          %td
+            %a(href="http://downloads.jboss.org/byteman/1.0.1/ProgrammersGuide.pdf") 1.0.1 pdf
+

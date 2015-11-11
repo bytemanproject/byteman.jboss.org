@@ -19,54 +19,24 @@
               %b.caret>
           %ul.dropdown-menu
             %li<
-              %a(href="#") Overview
+              %a(href="https://community.jboss.org/en/byteman") User Forum
             %li<
-              %a(href="#") Wiki
+              %a(href="https://community.jboss.org/en/byteman/dev") Developer Forum
             %li<
-              %a(href="#") User Forum
+              %a(href="irc:irc.freenode.com://#byteman") Chat
             %li<
-              %a(href="#") Mailing Lists
-            %li<
-              %a(href="#") Chat
-            %li<
-              %a(href="#") Blog
+              %a(href="http://bytemanblog.blogspot.co.uk/") Blog
         %li{:class=>"#{'active' if page.output_path.start_with?('/issues') }" }<
-          %a(href="#{site.base_url}/issues.html") Issues
-        %li{:class=>"#{'active' if page.output_path.start_with?('/source') }" }<
-          %a(href="#{site.base_url}/source.html") Source Code
-        %li{:class=>"#{'active' if page.output_path.start_with?('/build') }" }<
-          %a(href="#{site.base_url}/build.html") Build
+          %a(href="https://issues.jboss.org/browse/BYTEMAN") Issues
         %li.dropdown
           %a.dropdown-toggle(href="#" data-toggle="dropdown")<
-            = precede 'Follow Us ' do
-              %b.caret>
-          %ul.dropdown-menu.projectsocialmedia
-            %li<
-              %a(href="#")<
-                %img(src="#{site.jborg_images_url}/common/socialmedia_icon40_twitter.png")
-            %li<
-              %a(href="#")<
-                %img(src="#{site.jborg_images_url}/common/socialmedia_icon40_googleplus.png")
-            %li<
-              %a(href="#")<
-                %img(src="#{site.jborg_images_url}/common/socialmedia_icon40_facebook.png")
-            %li<
-              %a(href="#")<
-                %img(src="#{site.jborg_images_url}/common/socialmedia_icon40_youtube.png")
-            %li<
-              %a(href="#")<
-                %img(src="#{site.jborg_images_url}/common/socialmedia_icon40_linkedin.png")
-        %li.dropdown
-          %a.dropdown-toggle(href="#" data-toggle="dropdown")<
-            = precede 'Layouts ' do
+            = precede 'Source ' do
               %b.caret>
           %ul.dropdown-menu
             %li<
-              %a(href="#{site.base_url}/rightcol.html") Right Column
+              %a(href="http://github.com/bytemanproject/byteman") GitHub
             %li<
-              %a(href="#{site.base_url}/leftcol.html") Left Column
-            %li<
-              %a(href="#{site.base_url}/bothcol.html") 3 Columns
+              %a(href="https://source.jboss.org/browse/Byteman") FishEye
         %li.divider
 
       %form.navbar-form.navbar-right

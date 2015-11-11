@@ -2,10 +2,10 @@
 title: JBoss Community
 
 # Project id name
-project: example
+project: byteman
 
 # Project full name
-project_name: Example
+project_name: Byteman
 
 # Default minify settings
 css_minifier: disabled
@@ -58,7 +58,7 @@ wget:
     - http://static.jboss.org/theme/fonts/titilliumtext/
     - http://static.jboss.org/theme/fonts/font-awesome/
     - http://static.jboss.org/theme/images/common/
-    - http://static.jboss.org/example/
+    - http://static.jboss.org/byteman/
 
 # Update resource URLs based on the profile
 profiles:
@@ -66,7 +66,7 @@ profiles:
     jborg_fonts_url: /cache/static.jboss.org/theme/fonts
     jborg_images_url: /cache/static.jboss.org/theme/images
     jborg_js_url: /cache/static.jboss.org/theme/js
-    project_images_url: /cache/static.jboss.org/example/images
+    project_images_url: /cache/static.jboss.org/byteman/images
     bootstrap_css_url: /stylesheets-source/_bootstrap-community
     bootstrap_js_url: /javascripts/bootstrap-community
     symlinker:
@@ -76,10 +76,10 @@ profiles:
     jborg_fonts_url: http://static.jboss.org/theme/fonts
     jborg_images_url: http://static.jboss.org/theme/images
     jborg_js_url: http://static.jboss.org/theme/js
-    project_images_url: http://static.jboss.org/example/images
+    project_images_url: http://static.jboss.org/byteman/images
     bootstrap_css_url: http://static.jboss.org/theme/css/bootstrap-community/3.2.0.1/bootstrap-community
     bootstrap_js_url: http://static.jboss.org/theme/js/libs/bootstrap-community/3.2.0.1/bootstrap-community
-    base_url: http://example-stg.jboss.org
+    base_url: http://byteman-stg.jboss.org
     wget:
       enabled: false
     # Uncomment the line below and provide a valid Google Analytics ID to enable tracking of your site in this profile.
@@ -92,10 +92,10 @@ profiles:
     jborg_fonts_url: http://static.jboss.org/theme/fonts
     jborg_images_url: http://static.jboss.org/theme/images
     jborg_js_url: http://static.jboss.org/theme/js
-    project_images_url: http://static.jboss.org/example/images
+    project_images_url: http://static.jboss.org/byteman/images
     bootstrap_css_url: http://static.jboss.org/theme/css/bootstrap-community/3.2.0.1/bootstrap-community
     bootstrap_js_url: http://static.jboss.org/theme/js/libs/bootstrap-community/3.2.0.1/bootstrap-community
-    base_url: http://example.jboss.org
+    base_url: http://byteman.jboss.org
     wget:
       enabled: false
     # Uncomment the line below and provide a valid Google Analytics ID to enable tracking of your site in this profile.
