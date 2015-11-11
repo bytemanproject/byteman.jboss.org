@@ -1,12 +1,49 @@
 %div#coolstuff
   %p.text-center
-    %a{:href => "/coolstuff/desktopwallpapers/byteman"}> Desktop Wallpaper
+    %a{:href => "http://www.jboss.org/coolstuff/desktopwallpapers/byteman"}> Desktop Wallpaper
     &nbsp;|&nbsp;
     %a{:href => "http://www.cafepress.com/jbossorg/7779938"} Project Swag
   %a{:href => "/coolstuff/desktopwallpapers/byteman"}
     %img.img-responsive.center-block{:alt => "Cool Stuff", :height => "110", :src => "http://byteman.jboss.org/byteman/rightColumnParagraphs/01/imageBinary/byteman_coolstuff.png"}/
 
 
+.div
+.well
+  %h3
+    Latest Blog Posts
+    %a.rss{:href => "http://bytemanblog.blogspot.com/feeds/posts/rss"}
+      %i.icon-rss
+  #feed
+    .text-center
+    %script{ :type => 'text/javascript', :src => 'https://www.google.com/jsapi'}
+    -# Uses Google Feed API to load blog.infinispan.org feed and replace the DOM elements
+    :javascript
+      google.load("feeds", "1");
+
+      function initialize() {
+        var feed = new google.feeds.Feed("http://bytemanblog.blogspot.com/feeds/posts/default?format=xml");
+        feed.setNumEntries(4);
+        feed.load(function(result) {
+          if (!result.error) {
+            var feedDiv = $('#feed');
+            feedDiv.empty();
+            for (var i = 0; i < result.feed.entries.length; i++) {
+              var entry = result.feed.entries[i];
+              var date = new Date(entry.publishedDate);
+              var day = date.getDay();
+              var month = date.getMonth();
+              var year = date.getYear() + 1900;
+              feedDiv.append('<h5><a href="' + entry.link + '">' + entry.title + '</a></h5>');
+              feedDiv.append('<h6>' + entry.author + ' ' + day + '/' + month + '/' + year + '</h6>');
+            }
+          }
+        })
+      }
+      google.setOnLoadCallback(initialize);
+
+  %ul.listPosts
+    %li
+      %a.pull-right{:href=>"http://bytemanblog.blogspot.com"} More &raquo;
 .div
 .well
   #badges
