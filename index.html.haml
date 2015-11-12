@@ -9,22 +9,25 @@ title: Byteman Homepage
   %p Simplify Java tracing, monitoring and testing with Byteman
   .text-center
     %a.btn.btn-primary.btn-med(href="#{site.base_url}/downloads.html") Download Byteman 3.0.2!
+    %a.btn.btn-primary.btn-med(href="#{site.base_url}/docs.html") Try out the Tutorials
     %a.btn.btn-primary.btn-med(href="#{site.base_url}/docs.html") Read the Programmer's Guide!
 
 .row-fluid
   %h3 What is Byteman
   %p
 
-    Byteman is a tool which injects Java code into your application
-    methods or into Java runtime methods without the need for you to
-    recompile, repackage or even redeploy your application. Injection
-    can be performed at JVM startup or after startup while the
-    application is running. The injected code can access any of your
-    data and call any application methods, including where they are
-    private. You can inject code almost anywhere you want and there is
-    no need to prepare the original source code in advance. You can
-    even remove injected code and reinstall different changes while
-    the application continues to execute.
+    Byteman is a tool which makes it easy to trace, monitor and test
+    the behaviour of Java application and JDK runtime code. It injects
+    Java code into your application methods or into Java runtime
+    methods without the need for you to recompile, repackage or even
+    redeploy your application. Injection can be performed at JVM
+    startup or after startup while the application is still running.
+    Injected code can access any of your data and call any application
+    methods, including where they are private. You can inject code
+    almost anywhere you want and there is no need to prepare the
+    original source code in advance. You can even remove injected code
+    and reinstall different changes while the application continues to
+    execute.
 
 .row-fluid
   %h3 What would I use Byteman for
@@ -32,23 +35,24 @@ title: Byteman Homepage
   %p
     :markdown
 
-      The simplest use of Byteman is to install code which injects
-      print statements that trace what your application is doing. This
-      can be used for monitoring or debugging live deployments as well
-      as for instrumenting code under test so that you can be sure it
-      has operated correctly. By injecting code at very specific
-      locations you avoid the expensive performance overheads which
-      normally arise when you switch on debug or product trace. Also,
-      you get to decide what to trace when you _run_ your application
-      rather than when you _write_ it; so, you don't need 100%
-      hindsight to be able to display the information you
-      need. Finally, you are not just limited to tracing your own
+      The simplest use of Byteman is to inject print statements that
+      trace what your application is doing, idenitfying control flow
+      through your code and displaying the values of static or
+      instance data. This can be used for monitoring or debugging live
+      deployments as well as for instrumenting code under test so that
+      you can be sure it has operated correctly. By injecting code at
+      very specific locations you avoid the expensive performance
+      overheads which normally arise when you switch on debug or
+      product trace. Also, you get to decide what to trace when you
+      _run_ your application rather than when you _write_ it; so, you
+      don't need 100% hindsight to be able to display the information
+      you need. Finally, you are not just limited to tracing your own
       code. Byteman will inject into any Java emthods, including Java
       libraries and the JDK runtime. It doesn't need the original
       source code to be available in order to do so.
 
-      A more complex use case is to use Byteman to test your
-      application. Byteman can be used to inject faults or other side
+      A more complex use case is available when you use Byteman to
+      test your application. It can inject faults or other side
       effects which cause your application to perform unusual or
       unexpected operations. This allows you to force a test to enter
       and fully exercise a test scenario reliably. The required
@@ -118,21 +122,87 @@ title: Byteman Homepage
       for you to program even the most complex test scenarios.
 
 .row-fluid
-  %h3 How can I obtain Byteman?
+  %h3 How do I start using Byteman?
   %p
     :markdown
 
-      Byteman 3.0.2 is now available for download under the GNU
-      LGPL. It requires a JDK 6 or higher JVM. The release includes a
-      user guide which documents the scripting language and explains
-      how to use byteman to inject faults or tracing and monitoring
-      code. There is also a tutorial showing you how to get started
-      with Byteman and a follow-up tutorial describing BMUNit, the
-      package which integrates Byteman with JUnit and TestNG,
-      explaining how to drive BMUnit tests from maven or ant. An
-      advanced tutorial explains how to use BMUnit to perform
-      sophisticated fault injection testing. Finally the rulecheck
-      plugin tutorial explains how to configure the maven plugin which
+      [Byteman 3.0.2](#{site.base_url}/downloads.html) is now
+      available for download under the GNU LGPL. It requires a JDK 6
+      or higher JVM. The release includes a programmer's guide, also
+      available online
+      ([pdf](http://downloads.jboss.org/byteman/3.0.2/ProgrammersGuide.pdf)
+      or
+      [html](http://downloads.jboss.org/byteman/3.0.2/ProgrammersGuide.html)),
+      which provides a complete description of what Byteman does, how
+      it operates and and how it can be used, including all available
+      runtime configuration options.
+
+      If you are new to Byteman then the [tutorials](#{site.base_url}/docs.html)
+      provide a quick start, showing how Byteman can be employed to
+      perform tracing and monitoring and to support verification of
+      test outcomes and implement fault-injection tests.
+
+      * The [introductory
+      tutorial](http://community.jboss.org/wiki/ABytemanTutorial#top)
+      shows you how to get started, using Byteman from the command
+      line to trace and alter execution of a simple program.
+
+      * The [follow-up
+      tutorial](https://developer.jboss.org/wiki/BMUnitUsingBytemanWithJUnitOrTestNGFromMavenAndAnt#top)
+      describes BMUNit, the package which integrates Byteman with
+      JUnit and TestNG, and explains how to drive BMUnit/Byteman tests
+      from maven or ant. It provides simple examples of how Byteman
+      and BMUnit can be used to trace test execution, validate
+      correctness and inject faults to drive tests through error
+      scenarios.
+
+      * The [advanced
+      tutorial](http://community.jboss.org/wiki/FaultInjectionTestingWithByteman#top)
+      explains how to use BMUnit to perform sophisticated fault
+      injection testing. It uses a set of related Byteman rule scripts
+      to inject code into a multi-threaded application, revealing the
+      presence of a timing bug.
+
+      * Finally, the [rulecheck plugin
+      tutorial](https://community.jboss.org/wiki/CheckingYourBytemanRuleScriptsUnderMaven)
+      explains how to configure the Byteman maven plugin. This plugin
       automatically checks the validity of your Byteman rule scripts
-      as part of the maven build. See the documentation page for more
-      information.
+      as part of the maven build, ensuring that the target lcoation
+      specificd in your rules match injection points in your
+      application and type checkign the Java code in your rules
+      against the types found in those target locations.
+
+      See the [documentation](#{site.base_url}/docs.html) page for
+      more information.
+
+.row-fluid
+  %h3 The Byteman Community
+  %p
+    :markdown
+
+      Byteman is a community project so feedback and contributions are
+      welcome. The project provides a [freenode IRC
+      channel](irc://irc.freenode.net/#byteman) (look for #byteman)
+      where you can ask for help and a [community user
+      forum](https://community.jboss.org/en/byteman) where you can
+      report any problems you encounter when trying to obtain, build
+      or use Byteman. There is also a [developer
+      forum](https://community.jboss.org/en/byteman/dev) which should
+      only be used by those who wish to contribute to discussions of
+      the design and implementation of Byteman or to suggest
+      enhancements and new features.
+
+      All changes made to Byteman are managed using the [Byteman
+      JIRA](https://issues.jboss.org/browse/BYTEMAN) issue tracker
+      system. This includes both unresolved issues scheduled for
+      upcoming releases and issues which have been fixed by the
+      current or previous releases. Before reporting an issue in the
+      user forum please search JIRA and the user forum to see if it
+      has already been notified.
+
+      JIRA is also used to record scheduled development tasks and new,
+      nice-to-have features to be added to Byteman. If you wish to
+      propose such a feature or vote for its early addition or for
+      resolution of a issue which is important to you then your
+      feedback will be welcome. For new features please post to the
+      developer forum before raising a new JIRA.
