@@ -47,7 +47,7 @@ title: Byteman Homepage
       _run_ your application rather than when you _write_ it; so, you
       don't need 100% hindsight to be able to display the information
       you need. Finally, you are not just limited to tracing your own
-      code. Byteman will inject into any Java emthods, including Java
+      code. Byteman will inject into any Java methods, including Java
       libraries and the JDK runtime. It doesn't need the original
       source code to be available in order to do so.
 
@@ -55,15 +55,16 @@ title: Byteman Homepage
       test your application. It can inject faults or other side
       effects which cause your application to perform unusual or
       unexpected operations. This allows you to force a test to enter
-      and fully exercise a test scenario reliably. The required
-      side-effect might be as simple as forcing a method to throw an
-      exception or to return a synthetic result. Alternatively, you
-      might need to reset (method) local or (static) global state or
-      call out to other parts of the application or runtime. One very
-      useful option, commonly used when testing multi-threaded
-      applications, is to inject delays or synchronization operations
-      which engineer at test time execution timings that are normally
-      only encountered on rare occasions at deployment time.
+      and fully exercise a test scenario reliably and repeatably. The
+      required side-effect might be as simple as forcing a method to
+      throw an exception or to return a synthetic
+      result. Alternatively, you might need to reset (method) local or
+      (static) global state or call out to other parts of the
+      application or runtime. One very useful option, commonly used
+      when testing multi-threaded applications, is to inject delays or
+      synchronization operations which engineer at test time execution
+      timings that are normally only encountered on rare occasions at
+      deployment time.
 
       The Byteman BMUnit package integrates Byteman with JUnit and
       TestNG making it easy for you to use Byteman to extend the range
@@ -79,18 +80,19 @@ title: Byteman Homepage
       Byteman works by modifying the bytecode of your application
       classes at runtime. However, unlike many other bytecode
       transformers it operates at the level of Java not bytecode. You
-      supply some Java code you want to be executed and identify a
-      location in the application or runtime where it is to be
-      injected. Byteman works out how to change the bytecode so that
-      the proram includes the source level changes you have
-      requested. Since Byteman only needs access to bytecode this
+      give Byteman one or more rules which specify the Java code you
+      want to be executed and the location in methods of application
+      or runtime classes where you want it to be injected. Byteman
+      works out how to rewrite the bytecode so it behaves as if the
+      the original Java code included the source level changes you
+      have requested. Since Byteman only needs access to bytecode this
       means it can modify library code whose source is either
       unavailable or unable to be recompiled. This even includes the
       Java code which forms part of the Java virtual machine, classes
-      such as String, Thread etc. So, with Byteman you can trace what
-      the JVM is doing on behalf of your application code or cause JVM
-      classes like FileInputStream or Map to throw exceptions when
-      your application calls them.
+      such as String, Thread etc. So, with Byteman you can trace and
+      validate what the JVM is doing on behalf of your application
+      code or cause JVM classes like FileInputStream or Map to throw
+      exceptions when your application calls them.
 
   %p
     :markdown
@@ -105,21 +107,26 @@ title: Byteman Homepage
       in the rule action is executed only when the condition evaluates
       to true. Normally execution continues from the trigger point
       once the inejcted code has been executed. However, rule actions
-      may also force an exception or an early return from the
-      triggering method.
+      may include return or throw expressions, forcing a normal or
+      exceptional return, respectively, from the triggering method.
 
-      Byteman provides a suite of built-in functions which you can
-      call from rule conmditions and actions. They allow you to
-      perform a wide range of useful operations from simple output of
-      messages or stack dumps to propagation of complex error flows
-      which require coordinated actions in different parts of your
-      application.  However, you are not limited to these standard
-      built-in operations. You can inject any Java expression into
-      your application so long as the classes and instances they refer
-      to are in scope at the injection point. You can also replace or
-      extend the available built-in functions by supplying a POJO
-      (plain old java object) as a plugin. So, Byteman makes it easy
-      for you to program even the most complex test scenarios.
+      Byteman provides a suite of built-in 'convenience' functions
+      which you can call from rule conditions and actions. They allow
+      you to perform a wide range of useful operations from simple
+      output of messages or stack dumps to propagation of complex
+      error flows where multiple rules introduce coordinated actions
+      in different parts of your application. However, you are not
+      limited to these standard built-in operations. You can inject
+      any Java expression into your application so long as the classes
+      and instances they refer to are in scope at the injection
+      point. You can also replace or extend the available built-in
+      functions by supplying a POJO (plain old java object) as a
+      plugin. Byteman dynamically links rule code into the target
+      method context, auotmatically inferring the type of values and
+      expressions where it can and ensuring that the resulting code is
+      type safe and does not break the type contract defined by the
+      trigger method's signature. Byteman makes it easy to program
+      even the most complex test scenarios.
 
 .row-fluid
   %h3 How do I start using Byteman?
@@ -149,7 +156,7 @@ title: Byteman Homepage
 
       * The [follow-up
       tutorial](https://developer.jboss.org/wiki/BMUnitUsingBytemanWithJUnitOrTestNGFromMavenAndAnt#top)
-      describes BMUNit, the package which integrates Byteman with
+      describes BMUnit, the package which integrates Byteman with
       JUnit and TestNG, and explains how to drive BMUnit/Byteman tests
       from maven or ant. It provides simple examples of how Byteman
       and BMUnit can be used to trace test execution, validate
@@ -192,7 +199,9 @@ title: Byteman Homepage
       the design and implementation of Byteman or to suggest
       enhancements and new features.
 
-      All changes made to Byteman are managed using the [Byteman
+      Byteman sources are located in the project's [git
+      repository](https://github.com/bytemanproject/byteman). Bug
+      fixes and feature enhancements are managed using the [Byteman
       JIRA](https://issues.jboss.org/browse/BYTEMAN) issue tracker
       system. This includes both unresolved issues scheduled for
       upcoming releases and issues which have been fixed by the
