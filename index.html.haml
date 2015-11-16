@@ -36,7 +36,7 @@ title: Byteman Homepage
     :markdown
 
       The simplest use of Byteman is to inject print statements that
-      trace what your application is doing, idenitfying control flow
+      trace what your application is doing, identifying control flow
       through your code and displaying the values of static or
       instance data. This can be used for monitoring or debugging live
       deployments as well as for instrumenting code under test so that
@@ -51,20 +51,22 @@ title: Byteman Homepage
       libraries and the JDK runtime. It doesn't need the original
       source code to be available in order to do so.
 
-      A more complex use case is available when you use Byteman to
-      test your application. It can inject faults or other side
-      effects which cause your application to perform unusual or
-      unexpected operations. This allows you to force a test to enter
-      and fully exercise a test scenario reliably and repeatably. The
-      required side-effect might be as simple as forcing a method to
-      throw an exception or to return a synthetic
-      result. Alternatively, you might need to reset (method) local or
-      (static) global state or call out to other parts of the
-      application or runtime. One very useful option, commonly used
-      when testing multi-threaded applications, is to inject delays or
-      synchronization operations which engineer at test time execution
-      timings that are normally only encountered on rare occasions at
-      deployment time.
+      Two more complex use cases arise when you use Byteman to test
+      your application. Firstly, Byteman can inject code which checks
+      the flow of control or the state of application and runtime
+      data, failing the test if the program does not operate as
+      expected. Secondly, it can inject faults or other side effects
+      which cause your application to perform unusual or unexpected
+      operations. This allows you to force a test to enter and fully
+      exercise a test scenario reliably and repeatably. The required
+      side-effect might be as simple as forcing a method to throw an
+      exception or to return a synthetic result. Alternatively, you
+      might need to reset (method) local or (static) global state or
+      call out to other parts of the application or runtime. One very
+      useful option, commonly used when testing multi-threaded
+      applications, is to inject delays or synchronization operations
+      which engineer at test time execution timings that are normally
+      only encountered on rare occasions at deployment time.
 
       The Byteman BMUnit package integrates Byteman with JUnit and
       TestNG making it easy for you to use Byteman to extend the range
