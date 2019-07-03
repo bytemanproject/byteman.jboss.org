@@ -3,6 +3,11 @@
 %meta(name="viewport" content="width=device-width, initial-scale=1.0")
 %meta(name="description" content="#{page.description}")
 %meta(name="author" content="#{page.author}")
+- if site.profile.eql?("staging")
+  %meta(http-equiv="Content-Security-Policy" content="default-src 'self' https://static.jboss.org https://www.google.com https://www.redhat.com https://www.stage.redhat.com https://static.redhat.com; style-src 'self' 'unsafe-inline' https://static.jboss.org https://www.google.com https://www.redhat.com https://www.stage.redhat.com https://static.redhat.com; script-src 'self' 'unsafe-inline' https://static.jboss.org https://www.google.com https://ssl.google-analytics.com https://www.redhat.com https://www.stage.redhat.com https://static.redhat.com; object-src 'none'; base-uri 'none'")
+
+-if site.profile.eql?("production")
+  %meta(http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' https://static.jboss.org https://www.google.com https://www.redhat.com https://static.redhat.com; style-src 'self' 'unsafe-inline' https://static.jboss.org https://www.google.com https://www.redhat.com https://static.redhat.com; script-src 'self' 'unsafe-inline' https://static.jboss.org https://www.google.com https://ssl.google-analytics.com https://www.redhat.com https://www.stage.redhat.com https://static.redhat.com; object-src 'none'; base-uri 'none'")
 
 - pageStyle = page.style ;
 
